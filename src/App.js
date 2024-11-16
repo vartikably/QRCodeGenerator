@@ -8,7 +8,7 @@ function App() {
   const [qrCode,setQrCode] = useState("");
   const [qrSize,setQrSize] = useState("100");
   useEffect(()=>{
-    setQrCode("http://api.qrserver.com/v1/create-qr-code/?data="+word+"!&size="+qrSize+"x"+qrSize);
+    setQrCode("http://api.qrserver.com/v1/create-qr-code/?data="+word+"&size="+qrSize+"x"+qrSize);
     console.log(qrCode);
   },[word, qrSize]);
   const handleClick = ()=>{
